@@ -1,0 +1,5 @@
+/* when you hover over all h1's - their background color will be purple */
+h1:hover {
+    background-color:purple ;
+}
+
