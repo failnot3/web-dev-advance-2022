@@ -1,0 +1,12 @@
+/* When the input field is in focus - it's background-color will be the color teal */
+
+input:focus {
+    background-color: teal;
+}
+
+/* Active -  Triggers when a element is "being activated by user"*/
+
+button:active{
+    background-color: orange;
+    font-size: 30px;
+}
