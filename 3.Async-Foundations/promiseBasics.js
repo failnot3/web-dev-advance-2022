@@ -2,6 +2,7 @@
 // A promise is an object that represents a task that will be completed in the future
 
 // Creating a Promise:
+// A simple callback function
 let p1 = new Promise(function (resolve, reject) {
   resolve([1, 2, 3, 4]);
 });
@@ -9,10 +10,20 @@ let p1 = new Promise(function (resolve, reject) {
 p1.then(function (arr) {
   console.log("Promise p1 resolved with data: ", arr);
 });
-// The Event LOOP
-// Functionality in the JS runtime that checks the queue when the Stack is empty.
-// If the Stack is empty, the front of the queue is placed in the Stack!
 
-// JS is Single Threaded meaning Code execution is linear.
-// Code that is running cannot be interrupted by
-// something else going on in the program.
+// Handling Errors example
+
+let p2 = new Promise(function (res, rej) {
+  let num = Math.random();
+  if (num < 0.5) {
+    res(num);
+  } else {
+    rej(num);
+  }
+});
+
+p2.then(function (res) {
+  console.log("Success", res);
+}).catch(function (err) {
+  console.log("Error! ", err);
+});
