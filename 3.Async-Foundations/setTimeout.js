@@ -8,3 +8,8 @@ function callback() {
 
 let delay = 1000; // Delay in ms
 setTimeout(callback, delay);
+
+// Example with an anon fn:
+setTimeout(function () {
+  console.log("Runs in approx. 2000ms");
+}, 2000);
