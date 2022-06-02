@@ -27,3 +27,15 @@ p2.then(function (res) {
 }).catch(function (err) {
   console.log("Error! ", err);
 });
+
+// setTimeout with Promise:
+
+let promise = new Promise(function (ress, rejj) {
+  setTimeout(function () {
+    let randomId = Math.floor(Math.random() * 10);
+    ress(randomId);
+  }, 4000);
+});
+promise.then(function (data) {
+  console.log("Random int passed to resolve", data);
+});
