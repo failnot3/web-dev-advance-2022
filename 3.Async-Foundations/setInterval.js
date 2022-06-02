@@ -8,11 +8,21 @@ function callback() {
 }
 
 let repeat = 3000; // Delay in ms
-setTimeout(callback, repeat);
+setInterval(callback, repeat);
 
 // Example with an anon fn:
 let num = 0;
-setTimeout(function () {
+setInterval(function () {
   num++;
   console.log("Num: ", num);
 }, 1000);
+
+// Canceling setInterval
+let number = 0;
+let intervalId = setInterval(function () {
+  number++;
+  console.log("Num: ", number);
+  if (number === 5) {
+    clearInterval(intervalId);
+  }
+}, 1500);
