@@ -2,8 +2,8 @@
 // then invoked by that other function.
 
 // Example:
-function forEach(arr, callback){
-    for (var i = 0, i < arr.length; i++){
-        callback(arr[i], i, arr);
-    }
+function forEach(arr, callback) {
+  for (var i = 0; i < arr.length; i++) {
+    callback(arr[i], i, arr);
+  }
 }
